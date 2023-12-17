@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/node_modules/native-emoji/dist/nativeEmoji.min.css">
+  <title>Emoji</title>
+</head>
+<style>
+  .emoji-picker-trigger {
+    top: 2px;
+    right: 2px;
+  }
+  
+  .wrapper-input {
+    padding: 4px;
+  }
+</style>
+<body class="page">
+    <div class="wrapper" style="width: 300px">
+      <input class="wrapper-input" data-native-emoji="true">
+    </div>
+</body>
+<script src="/node_modules/native-emoji/dist/nativeEmoji.min.js"></script>
+    <script>
+      new nativeEmoji();
+
+      const input = document.querySelector('.wrapper-input');
+
+      input.addEventListener('change', function() {
+        console.log(input.value);
+      })
+    </script>
+</html>
